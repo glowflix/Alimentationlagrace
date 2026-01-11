@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez La Grace - Votre alimentation de confiance">
+    <title>Contact - La Grace</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/image/lagraceimage.png" alt="La Grace Logo">
+                    <span>La Grace</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html">Commander</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour vous servir</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Notre Emplacement</h3>
+                    <p>Alimentation La Grace</p>
+                    <p class="coordinates">Coordonnées GPS: 0.5116, 25.1926</p>
+                    <button class="btn btn-sm btn-primary" onclick="openInMaps()">
+                        <i class="fas fa-directions"></i> Obtenir l'itinéraire
+                    </button>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+243972787103">+243 972 787 103</a></p>
+                    <p class="text-muted">Lundi - Samedi: 8h - 20h</p>
+                    <p class="text-muted">Dimanche: 9h - 18h</p>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Commandez directement via WhatsApp</p>
+                    <a href="https://wa.me/243972787103" target="_blank" class="btn btn-sm btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Ouvrir WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Heures d'Ouverture</h3>
+                    <ul class="hours-list">
+                        <li><strong>Lundi - Samedi:</strong> 8h00 - 20h00</li>
+                        <li><strong>Dimanche:</strong> 9h00 - 18h00</li>
+                        <li><strong>Jours Fériés:</strong> Horaires variables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Trouvez-nous sur la Carte</h2>
+            <div class="map-container">
+                <div id="map" class="map"></div>
+                <div class="map-overlay">
+                    <div class="map-info">
+                        <h3><i class="fas fa-map-marker-alt"></i> La Grace</h3>
+                        <p>Alimentation & Commerce Général</p>
+                        <button class="btn btn-primary" onclick="openInMaps()">
+                            <i class="fas fa-directions"></i> Obtenir l'itinéraire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Envoyez-nous un Message</h2>
+                    <p>Remplissez le formulaire ci-dessous et nous vous contacterons sur WhatsApp</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Nom Complet *
+                            </label>
+                            <input type="text" id="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i> Téléphone *
+                            </label>
+                            <input type="tel" id="phone" required placeholder="+243 XXX XXX XXX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-tag"></i> Sujet
+                        </label>
+                        <select id="subject">
+                            <option value="commande">Commande</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="stock">Disponibilité produit</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i> Message *
+                        </label>
+                        <textarea id="message" rows="5" required placeholder="Votre message..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title">Liens Rapides</h2>
+            <div class="links-grid">
+                <a href="produits.html" class="link-card animate-on-scroll">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Voir nos Produits</h3>
+                    <p>Découvrez notre catalogue complet</p>
+                </a>
+                <a href="commande.html" class="link-card animate-on-scroll">
+                    <i class="fas fa-cart-shopping"></i>
+                    <h3>Passer une Commande</h3>
+                    <p>Commandez facilement en ligne</p>
+                </a>
+                <a href="https://wa.me/243972787103" target="_blank" class="link-card animate-on-scroll">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Direct</h3>
+                    <p>Contactez-nous instantanément</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>La Grace</h3>
+                    <p>Votre alimentation de confiance depuis des années.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html">Commander</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+243972787103">+243 972 787 103</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/243972787103" target="_blank">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Grace. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="produits.html"><i class="fas fa-shopping-bag"></i> Produits</a></li>
+            <li><a href="commande.html"><i class="fas fa-cart-shopping"></i> Commander</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
+

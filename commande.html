@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Passez votre commande chez La Grace">
+    <title>Commander - La Grace</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/order.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/image/lagraceimage.png" alt="La Grace Logo">
+                    <span>La Grace</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html" class="active">Commander</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Passer une Commande</h1>
+            <p>Choisissez votre mode de commande</p>
+        </div>
+    </section>
+
+    <!-- Order Methods Section -->
+    <section class="order-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <!-- WhatsApp Method -->
+                <div class="method-card animate-on-scroll">
+                    <div class="method-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Commander via WhatsApp</h3>
+                    <p>Contactez-nous directement sur WhatsApp pour passer votre commande rapidement</p>
+                    <ul class="method-benefits">
+                        <li><i class="fas fa-check"></i> Réponse rapide</li>
+                        <li><i class="fas fa-check"></i> Communication directe</li>
+                        <li><i class="fas fa-check"></i> Confirmation immédiate</li>
+                    </ul>
+                    <a href="https://wa.me/243972787103?text=Bonjour%2C%20je%20souhaite%20passer%20une%20commande" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+                    </a>
+                </div>
+
+                <!-- Direct Payment Method -->
+                <div class="method-card animate-on-scroll">
+                    <div class="method-icon direct">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Paiement Direct au Magasin</h3>
+                    <p>Venez directement à notre magasin pour effectuer vos achats</p>
+                    <ul class="method-benefits">
+                        <li><i class="fas fa-check"></i> Voir les produits physiquement</li>
+                        <li><i class="fas fa-check"></i> Conseils personnalisés</li>
+                        <li><i class="fas fa-check"></i> Emportez vos achats immédiatement</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-map-marker-alt"></i> Voir notre localisation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Order Form -->
+    <section class="quick-order">
+        <div class="container">
+            <h2 class="section-title">Commande Rapide</h2>
+            <div class="order-form-container">
+                <form id="quickOrderForm" class="order-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="customerName">
+                                <i class="fas fa-user"></i> Nom Complet *
+                            </label>
+                            <input type="text" id="customerName" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">
+                                <i class="fas fa-phone"></i> Téléphone *
+                            </label>
+                            <input type="tel" id="customerPhone" required placeholder="+243 XXX XXX XXX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderDetails">
+                            <i class="fas fa-list"></i> Détails de la Commande *
+                        </label>
+                        <textarea id="orderDetails" rows="5" required placeholder="Ex: 2 Cartons de Vin Kolo mboka, 5 pièces de Savon monganga..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orderNotes">
+                            <i class="fas fa-comment"></i> Notes Additionnelles
+                        </label>
+                        <textarea id="orderNotes" rows="3" placeholder="Informations supplémentaires..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Envoyer la Commande
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Info Section -->
+    <section class="payment-info">
+        <div class="container">
+            <h2 class="section-title">Modes de Paiement</h2>
+            <div class="payment-grid">
+                <div class="payment-card animate-on-scroll">
+                    <div class="payment-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Espèces</h3>
+                    <p>Paiement en espèces accepté au magasin</p>
+                </div>
+                <div class="payment-card animate-on-scroll">
+                    <div class="payment-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Money</h3>
+                    <p>Paiement via Mobile Money disponible</p>
+                </div>
+                <div class="payment-card animate-on-scroll">
+                    <div class="payment-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Crédit Client</h3>
+                    <p>Pour nos clients réguliers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment passer une commande ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez passer commande via WhatsApp au +243 972 787 103 ou venir directement au magasin.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Faites-vous la livraison ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Actuellement, nous ne proposons pas de service de livraison. Les clients viennent récupérer leurs commandes au magasin.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont les modes de paiement acceptés ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous acceptons les espèces, Mobile Money et proposons des facilités de crédit pour nos clients réguliers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Puis-je vérifier la disponibilité d'un produit avant de commander ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui ! Consultez notre page Produits pour voir le stock en temps réel ou contactez-nous sur WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>La Grace</h3>
+                    <p>Votre alimentation de confiance depuis des années.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html">Commander</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+243972787103">+243 972 787 103</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/243972787103" target="_blank">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Grace. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="produits.html"><i class="fas fa-shopping-bag"></i> Produits</a></li>
+            <li><a href="commande.html" class="active"><i class="fas fa-cart-shopping"></i> Commander</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/order.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
+

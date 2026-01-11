@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Grace - Votre alimentation de confiance avec une large gamme de produits de qualité">
+    <title>La Grace - Alimentation & Commerce Général</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/image/lagraceimage.png" alt="La Grace Logo">
+                    <span>La Grace</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html">Commander</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Bienvenue chez La Grace</h1>
+            <p class="hero-subtitle animate-slide-up">Votre alimentation de confiance pour tous vos besoins quotidiens</p>
+            <div class="hero-buttons animate-slide-up">
+                <a href="produits.html" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Découvrir nos produits
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i> Nous trouver
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Pourquoi choisir La Grace ?</h2>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Large Gamme</h3>
+                    <p>Des milliers de produits disponibles en Carton, Millier et à l'unité</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Prix Compétitifs</h3>
+                    <p>Les meilleurs prix pour tous vos achats en gros et détail</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Stock en Temps Réel</h3>
+                    <p>Consultez la disponibilité de nos produits instantanément</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Localisation GPS</h3>
+                    <p>Trouvez-nous facilement grâce à notre position GPS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Produits Populaires</h2>
+            <div class="products-grid" id="featuredProducts">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Chargement des produits...</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="produits.html" class="btn btn-primary">
+                    Voir tous les produits <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à commander ?</h2>
+                <p>Contactez-nous via WhatsApp pour passer votre commande</p>
+                <a href="https://wa.me/243972787103" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>La Grace</h3>
+                    <p>Votre alimentation de confiance depuis des années. Nous offrons une large gamme de produits de qualité à des prix compétitifs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="commande.html">Commander</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+243972787103">+243 972 787 103</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/243972787103" target="_blank">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Coordonnées: 0.5116, 25.1926</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Heures d'ouverture</h3>
+                    <ul>
+                        <li>Lundi - Samedi: 8h00 - 20h00</li>
+                        <li>Dimanche: 9h00 - 18h00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Grace. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="produits.html"><i class="fas fa-shopping-bag"></i> Produits</a></li>
+            <li><a href="commande.html"><i class="fas fa-cart-shopping"></i> Commander</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>
+
