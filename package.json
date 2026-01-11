@@ -1,0 +1,13 @@
+{
+  "name": "la-grace",
+  "version": "1.0.0",
+  "description": "Site web La Grace",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build needed for static site'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
