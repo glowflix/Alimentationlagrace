@@ -47,16 +47,20 @@ class CartManager {
     addToCart(product) {
         const existingItem = this.cart.find(item => item.code === product.code);
         
+        // Récupérer le prix (compatible avec price ou priceFC)
+        const productPrice = Number(product.price) || Number(product.priceFC) || 0;
+        
         if (existingItem) {
             existingItem.quantity += 1;
         } else {
             this.cart.push({
                 code: product.code,
                 name: product.name,
-                price: product.priceFC || 0,
+                price: productPrice,
                 quantity: 1,
                 stock: product.stock || 0,
-                image: product.image || 'public/image/lagraceimage.png'
+                image: product.image || 'public/image/lagraceimage.png',
+                sheetType: product.sheetType || 'carton'
             });
         }
         
@@ -170,18 +174,30 @@ class CartManager {
                     <div class="cart-empty">
                         <i class="fas fa-shopping-cart"></i>
                         <p>Votre panier est vide</p>
+                        <a href="produits.html" class="btn btn-primary btn-sm" style="margin-top: 1rem;">
+                            <i class="fas fa-shopping-bag"></i> Voir les produits
+                        </a>
                     </div>
                 `;
             } else {
-                cartBody.innerHTML = this.cart.map(item => `
+                cartBody.innerHTML = this.cart.map(item => {
+                    const unitPrice = Number(item.price) || 0;
+                    const totalPrice = unitPrice * item.quantity;
+                    
+                    return `
                     <div class="cart-item">
-                        <img src="${item.image}" alt="${item.name}" onerror="this.src='public/image/lagraceimage.png'">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}" onerror="this.src='public/image/lagraceimage.png'">
+                            <span class="cart-item-badge">${item.sheetType || 'carton'}</span>
+                        </div>
                         <div class="cart-item-info">
                             <h4>${item.name}</h4>
-                            <p>${window.appUtils.formatCurrency(item.price, 'FC')}</p>
+                            <div class="cart-item-price-info">
+                                <span class="cart-item-unit-price">${unitPrice.toLocaleString('fr-FR')} FC/unité</span>
+                            </div>
                             <div class="cart-item-quantity">
-                                <button onclick="cartManager.updateQuantity('${item.code}', ${item.quantity - 1})">
-                                    <i class="fas fa-minus"></i>
+                                <button onclick="cartManager.updateQuantity('${item.code}', ${item.quantity - 1})" ${item.quantity <= 1 ? 'class="danger"' : ''}>
+                                    <i class="fas fa-${item.quantity <= 1 ? 'trash' : 'minus'}"></i>
                                 </button>
                                 <span>${item.quantity}</span>
                                 <button onclick="cartManager.updateQuantity('${item.code}', ${item.quantity + 1})">
@@ -190,22 +206,26 @@ class CartManager {
                             </div>
                         </div>
                         <div class="cart-item-actions">
-                            <p class="cart-item-total">${window.appUtils.formatCurrency(item.price * item.quantity, 'FC')}</p>
-                            <button class="cart-item-remove" onclick="cartManager.removeFromCart('${item.code}')">
-                                <i class="fas fa-trash"></i>
+                            <p class="cart-item-total">${totalPrice.toLocaleString('fr-FR')} FC</p>
+                            <button class="cart-item-remove" onclick="cartManager.removeFromCart('${item.code}')" title="Supprimer">
+                                <i class="fas fa-times"></i>
                             </button>
                         </div>
                     </div>
-                `).join('');
+                `}).join('');
             }
         }
 
         if (cartTotal) {
-            cartTotal.textContent = window.appUtils.formatCurrency(this.getTotal(), 'FC');
+            const total = this.getTotal();
+            cartTotal.innerHTML = `<span class="total-amount">${total.toLocaleString('fr-FR')}</span> <span class="total-currency">FC</span>`;
         }
 
         if (checkoutBtn) {
             checkoutBtn.disabled = this.cart.length === 0;
+            if (this.cart.length > 0) {
+                checkoutBtn.innerHTML = `<i class="fab fa-whatsapp"></i> Commander (${this.getItemCount()} article${this.getItemCount() > 1 ? 's' : ''})`;
+            }
         }
     }
 
